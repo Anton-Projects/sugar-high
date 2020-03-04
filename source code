@@ -1,0 +1,17 @@
+function sugarHigh(candies, threshold) {
+
+    let candiesGiven = candies.slice(0);
+    let candiesToEat = [];
+
+    candiesGiven.sort((a,b) => (a-b));
+
+    for (num of candiesGiven) {
+        if (num <= threshold) {
+            candiesToEat.push(candies.indexOf(num));
+            threshold -= num;
+        }
+    }
+    
+    console.log(candiesToEat.sort((a,b) => (a-b)));
+    
+}
